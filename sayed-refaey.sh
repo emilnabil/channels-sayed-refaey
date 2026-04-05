@@ -1,8 +1,8 @@
 #!/bin/sh
 # Command:
-# wget https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/installer.sh -qO - | /bin/sh
+# wget https://github.com/emilnabil/channels-sayed-refaey/raw/refs/heads/main/sayed-refaey.sh -qO - | /bin/sh
 ###########################################
-MY_URL="https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main"
+MY_URL="https://github.com/emilnabil/channels-sayed-refaey/raw/refs/heads/main"
 
 echo "******************************************************************************************************************"
 echo "        DOWNLOAD AND INSTALL CHANNEL"
@@ -20,14 +20,14 @@ rm -rf /home/root/.cache/enigma2
 echo "        INSTALLING NEW CHANNELS..."
 cd /tmp || exit 1
 
-if wget -q "${MY_URL}/channels_backup_by_Emil-Nabil.tar.gz"; then
-    if [ -s channels_backup_by_Emil-Nabil.tar.gz ]; then
-        tar -xzf channels_backup_by_Emil-Nabil.tar.gz -C /
-        rm -f channels_backup_by_Emil-Nabil.tar.gz
+if wget -q "${MY_URL}/channels_backup_by-sayed-refaey.tar.gz"; then
+    if [ -s channels_backup_by-sayed-refaey.tar.gz ]; then
+        tar -xzf channels_backup_by-sayed-refaey.tar.gz -C /
+        rm -f channels_backup_by-sayed-refaey.tar.gz
         echo "        CHANNELS INSTALLED SUCCESSFULLY"
     else
         echo "        ERROR: Downloaded file is empty"
-        rm -f channels_backup_by_Emil-Nabil.tar.gz
+        rm -f channels_backup_by-sayed-refaey.tar.gz
         exit 1
     fi
 else
@@ -68,5 +68,8 @@ echo "        If Enigma2 doesn't restart automatically, please reboot manually"
 echo "**********************************************************************************"
 
 exit 0
+
+
+
 
 
